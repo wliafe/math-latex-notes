@@ -1,0 +1,90 @@
+﻿\documentclass[a4paper,12pt,UTF8]{ctexart}
+\usepackage{MyStyle}
+
+\begin{document}
+    \title{高等数学公式背诵}
+    \author{王泠风}
+    \date{2024 年 10 月 04 日}
+    \maketitle
+
+    \section{极限}
+
+    \subsection{两个重要极限}
+    \begin{align*}
+        \lim_{x\to 0}\frac{\sin x}{x}& = 1& \lim_{x\to\infty}\left(1+\frac{1}{x}\right)^x& = \mathrm{e}&\\
+    \end{align*}
+    
+    \subsection{泰勒公式极限应用(x→0)}
+    \begin{align*}
+        \sin x& = x - \frac{x^{3}}{6} + o(x^{3})& \arcsin x& = x + \frac{x^{3}}{6} + o(x^{3})&\\
+        \tan x& = x + \frac{x^{3}}{3} + o(x^{3})& \arctan x& = x - \frac{x^{3}}{3} + o(x^{3})&\\
+        \cos x& = 1 - \frac{x^{2}}{2} + \frac{x^{4}}{24} + o(x^{4})& \ln (1+x)& = x - \frac{x^{2}}{2} + \frac{x^{3}}{3} + o(x^{3})&\\
+        e^x& = 1 + x + \frac{x^{2}}{2!} + \frac{x^{3}}{3!} + o(x^{3})& (1+x)^{a}& = 1 + ax + \frac{a(a-1)}{2!}x^{2} + o(x^{2})&\\
+    \end{align*}
+
+    \section{常用求导公式}
+    \begin{align*}
+        (\sec x)^{'}& = \sec x\tan x& (\arcsin x)^{'}& = \frac{1}{\sqrt{1-x^{2}}}&\\
+        (\csc x)^{'}& = -\csc x\cot x& (\arccos x)^{'}& = -\frac{1}{\sqrt{1-x^{2}}}&\\
+        (\tan x)^{'}& = \sec^{2}x& (\arctan x)^{'}& = \frac{1}{1+x^{2}}&\\
+        (\cot x)^{'}& = -\csc^{2}x& (\operatorname{arccot} x)^{'}& = -\frac{1}{1+x^{2}}&\\
+        [\ln(x+\sqrt{x^{2}+1})]^{'}& = \frac{1}{\sqrt{x^{2}+1}}& [\ln(x+\sqrt{x^{2}-1})]^{'}& = \frac{1}{\sqrt{x^{2}-1}}&\\
+    \end{align*}
+
+    \section{常用积分公式}
+    \begin{align*}
+        \int {a}^{x} dx& = \frac{{a}^{x}}{\ln a}+C& \int \frac{1}{a^{2}+x^{2}}dx& = \frac{1}{a}\arctan\frac{x}{a}+C \enspace (a>0)&\\
+        \int \tan x dx& = -\ln \left|\cos x \right|+C& \int \frac{1}{\sqrt{a^{2}-x^{2}}}dx& = \arcsin\frac{x}{a}+C \enspace (a>0)&\\
+        \int \cot x dx& = \ln \left|\sin x \right|+C& \int \frac{1}{\sqrt{x^{2}+a^{2}}}dx& = \ln\left(x+\sqrt{x^{2}+a^{2}}\right)+C&\\
+        \int \sec x dx& = \ln \left|\sec x + \tan x \right|+C& \int \frac{1}{\sqrt{x^{2}-a^{2}}}dx& = \ln\left|x+\sqrt{x^{2}-a^{2}}\right|+C \enspace (\left|x\right|>\left|a\right|)&\\
+        \int \csc x dx& = \ln \left|\csc x - \cot x \right|+C& \int \frac{1}{x^{2}-a^{2}}dx& = \frac{1}{2a}\ln\left|\frac{x-a}{x+a}\right|+C&\\
+        \int \tan^2 x dx& = \tan x-x+C& \int \cot^2 x dx& = -\cot x-x+C& \\
+    \end{align*}
+
+    \section{反函数导数}
+
+    \section{中值定理}
+
+    \subsection{泰勒公式}
+
+    \subsubsection{泰勒原式}
+    \begin{align*}
+        f(x)& = f(x_0)+f'(x_0)(x-x_0)+\frac{f''(x_0)}{2!}(x-x_0)^2+\cdots+\frac{f^{(n)}(x_0)}{n!}(x-x_0)^n+\frac{f^{(n+1)}(\xi)}{(n+1)!}(x-x_0)^{n+1}&\\
+    \end{align*}
+
+    \subsubsection{泰勒展开式}
+    \begin{align*}
+        e^x& = \sum_{n=0}^{\infty}\frac{x^{n}}{n!}&& = 1 + x + \frac{x^{2}}{2!} + \frac{x^{3}}{3!} + \cdots + \frac{x^{n}}{n!} + o(x^{n}) \enspace (-\infty < x < +\infty)&\\
+        \sin x& = \sum_{n=0}^{\infty}(-1)^{n}\frac{x^{2n+1}}{(2n+1)!}&& = x - \frac{x^{3}}{3!} + \frac{x^{5}}{5!} - \cdots + (-1)^{n}\frac{x^{2n+1}}{(2n+1)!} + o(x^{2n+1}) \enspace (-\infty < x < +\infty)&\\
+        \cos x& = \sum_{n=0}^{\infty}(-1)^{n}\frac{x^{2n}}{(2n)!}&& = 1 - \frac{x^{2}}{2!} + \frac{x^{4}}{4!} - \cdots + (-1)^{n}\frac{x^{2n}}{(2n)!} + o(x^{2n}) \enspace (-\infty < x < +\infty)&\\
+        \frac{1}{1-x}& = \sum_{n=0}^{\infty}x^{n}&& = 1 + x + x^{2} + x^{3} + \cdots + x^{n} + o(x^{n}) \enspace (-1 < x < 1)&\\
+        \frac{1}{1+x}& = \sum_{n=0}^{\infty}(-1)^{n}x^{n}&& = 1 - x + x^{2} - x^{3} + \cdots + (-1)^{n}x^{n} + o(x^{n}) \enspace (-1 < x < 1) &\\
+        \ln (1+x)& = \sum_{n=1}^{\infty}(-1)^{n-1}\frac{x^{n}}{n}&& = x - \frac{x^{2}}{2} + \frac{x^{3}}{3} - \cdots + (-1)^{n-1}\frac{x^{n}}{n} + o(x^{n}) \enspace (-1 < x \leq 1)&\\
+    \end{align*}
+    \begin{align*}
+        (1+x)^{a}& = 1 + ax + \frac{a(a-1)}{2!}x^{2} + \cdots + \frac{a(a-1)\cdots(a-n+1)}{n!}x^{n} + o(x^{n}) \enspace 
+        \begin{cases}
+            x\in (-1,1),&\text{当}a\leq -1,\\
+            x\in (-1,1],&\text{当}-1<a<0,\\
+            x\in [-1,1],&\text{当}a>0\text{且}a\notin \mathbb{N_+},\\
+            x\in \mathbb{R},&\text{当}a\in \mathbb{N_+}.
+        \end{cases}&\\
+    \end{align*}
+
+    \section{罗尔定理}
+
+    \section{微分方程}
+
+    \section{欧拉方程}
+
+    \section{常用极数}
+
+    \section{曲率半径}
+
+    \section{形心公式}
+
+    \section{旋转曲面}
+
+    \section{空间曲线}
+
+\end{document}
