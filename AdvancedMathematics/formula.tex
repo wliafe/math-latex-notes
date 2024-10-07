@@ -22,7 +22,14 @@
         e^x& = 1 + x + \frac{x^{2}}{2!} + \frac{x^{3}}{3!} + o(x^{3})& (1+x)^{a}& = 1 + ax + \frac{a(a-1)}{2!}x^{2} + o(x^{2})&\\
     \end{align*}
 
-    \section{常用求导公式}
+    \section{微分}
+
+    \subsection{反函数导数}
+    \begin{align*}
+        x_y'& = \frac{1}{y_x'}& x_{yy}''& = \frac{-y_{xx}''}{(y_x')^{3}}&\\
+    \end{align*}
+
+    \subsection{常用求导公式}
     \begin{align*}
         (\sec x)^{'}& = \sec x\tan x& (\arcsin x)^{'}& = \frac{1}{\sqrt{1-x^{2}}}&\\
         (\csc x)^{'}& = -\csc x\cot x& (\arccos x)^{'}& = -\frac{1}{\sqrt{1-x^{2}}}&\\
@@ -41,9 +48,12 @@
         \int \tan^2 x dx& = \tan x-x+C& \int \cot^2 x dx& = -\cot x-x+C& \\
     \end{align*}
 
-    \section{反函数导数}
-
     \section{中值定理}
+
+    \subsection{罗尔定理}
+    \begin{align*}
+        f'(x)+kf(x)&\Rightarrow f(x)e^{kx}& [f^2(x)]'& = 2f(x)f'(x)& [f(x)f'(x)]'& = [f'(x)]^2+f(x)f''(x)&\\
+    \end{align*}
 
     \subsection{泰勒公式}
 
@@ -71,13 +81,38 @@
         \end{cases}&\\
     \end{align*}
 
-    \section{罗尔定理}
-
     \section{微分方程}
 
     \section{欧拉方程}
 
     \section{常用极数}
+    \begin{align*}
+        \text{P极数}(n>1)\enspace& \frac{1}{n^{p}}
+        \begin{cases}
+            p>1,&\text{收敛},\\
+            p \leq 1,&\text{发散}.
+        \end{cases}&
+        \text{P积分}\enspace& \int_{1}^{+\infty}\frac{1}{x^{p}}dx
+        \begin{cases}
+            p>1,&\text{收敛},\\
+            p \leq 1,&\text{发散}.
+        \end{cases}&\\
+        \text{广义P极数}\enspace& \sum_{n=2}^{\infty}\frac{1}{n \ln^p n}
+        \begin{cases}
+            p>1,&\text{收敛},\\
+            p \leq 1,&\text{发散}.
+        \end{cases}&
+        \text{广义P积分}\enspace& \int_{2}^{+\infty}\frac{1}{x \ln^p x}dx
+        \begin{cases}
+            p>1,&\text{收敛},\\
+            p \leq 1,&\text{发散}.
+        \end{cases}&\\
+        \text{等比极数}\enspace& \sum_{n=1}^{\infty}aq^{n-1}
+        \begin{cases}
+            |q|<1,&\text{收敛},\\
+            |q| \geq 1,&\text{发散}.
+        \end{cases}&\\
+    \end{align*}
 
     \section{曲率半径}
 
