@@ -7,6 +7,21 @@
     \date{2024 年 10 月 04 日}
     \maketitle
 
+    \section{基础公式}
+    
+    \subsection{不等式}
+    \begin{align*}
+        \left| a\pm b \right|& \leq \left| a \right| + \left| b \right|& \left| \left| a \right| - \left| b \right| \right|& \leq \left| a-b \right|& \sqrt{ab}& \leq \frac{a+b}{2} \leq \sqrt{\frac{a^2+b^2}{2}}&\\
+        \sin x& \leq x \leq \tan x& \frac{1}{1+x}& \leq \ln \left( 1+\frac{1}{x} \right) \leq \frac{1}{x}& \ln \left( 1+x \right)& \leq x \leq e^x-1&\\
+    \end{align*}
+
+    \subsection{三角函数}
+    \begin{align*}
+        \tan \frac{x}{2}& = \pm \sqrt{\frac{1-\cos x}{1+\cos x}} = \frac{1-\cos x}{\sin x}& && \tan \frac{x}{2}& = u&\\
+        \sin \frac{x}{2}& = \pm \sqrt{\frac{1-\cos x}{2}}& \tan (\alpha + \beta)& = \frac{\tan \alpha + \tan \beta}{1 - \tan \alpha \tan \beta}& \sin x& = \frac{2u}{1+u^{2}}&\\
+        \cos \frac{x}{2}& = \pm \sqrt{\frac{1+\cos x}{2}}& \tan (\alpha - \beta)& = \frac{\tan \alpha - \tan \beta}{1 + \tan \alpha \tan \beta}& \cos x& = \frac{1-u^{2}}{1+u^{2}}&\\
+    \end{align*}
+
     \section{极限}
 
     \subsection{两个重要极限}
@@ -22,7 +37,7 @@
         e^x& = 1 + x + \frac{x^{2}}{2!} + \frac{x^{3}}{3!} + o(x^{3})& (1+x)^{a}& = 1 + ax + \frac{a(a-1)}{2!}x^{2} + o(x^{2})&\\
     \end{align*}
 
-    \section{微分}
+    \section{一元函数微分学}
 
     \subsection{反函数导数}
     \begin{align*}
@@ -38,31 +53,21 @@
         [\ln(x+\sqrt{x^{2}+1})]^{'}& = \frac{1}{\sqrt{x^{2}+1}}& [\ln(x+\sqrt{x^{2}-1})]^{'}& = \frac{1}{\sqrt{x^{2}-1}}&\\
     \end{align*}
 
-    \section{常用积分公式}
-    \begin{align*}
-        \int {a}^{x} dx& = \frac{{a}^{x}}{\ln a}+C& \int \frac{1}{a^{2}+x^{2}}dx& = \frac{1}{a}\arctan\frac{x}{a}+C \enspace (a>0)&\\
-        \int \tan x dx& = -\ln \left|\cos x \right|+C& \int \frac{1}{\sqrt{a^{2}-x^{2}}}dx& = \arcsin\frac{x}{a}+C \enspace (a>0)&\\
-        \int \cot x dx& = \ln \left|\sin x \right|+C& \int \frac{1}{\sqrt{x^{2}+a^{2}}}dx& = \ln\left(x+\sqrt{x^{2}+a^{2}}\right)+C&\\
-        \int \sec x dx& = \ln \left|\sec x + \tan x \right|+C& \int \frac{1}{\sqrt{x^{2}-a^{2}}}dx& = \ln\left|x+\sqrt{x^{2}-a^{2}}\right|+C \enspace (\left|x\right|>\left|a\right|)&\\
-        \int \csc x dx& = \ln \left|\csc x - \cot x \right|+C& \int \frac{1}{x^{2}-a^{2}}dx& = \frac{1}{2a}\ln\left|\frac{x-a}{x+a}\right|+C&\\
-        \int \tan^2 x dx& = \tan x-x+C& \int \cot^2 x dx& = -\cot x-x+C& \\
-    \end{align*}
+    \subsection{中值定理}
 
-    \section{中值定理}
-
-    \subsection{罗尔定理}
+    \subsubsection{罗尔定理}
     \begin{align*}
         f'(x)+kf(x)&\Rightarrow f(x)e^{kx}& [f^2(x)]'& = 2f(x)f'(x)& [f(x)f'(x)]'& = [f'(x)]^2+f(x)f''(x)&\\
     \end{align*}
 
-    \subsection{泰勒公式}
+    \subsubsection{泰勒公式}
 
-    \subsubsection{泰勒原式}
+    \paragraph{泰勒原式}
     \begin{align*}
         f(x)& = f(x_0)+f'(x_0)(x-x_0)+\frac{f''(x_0)}{2!}(x-x_0)^2+\cdots+\frac{f^{(n)}(x_0)}{n!}(x-x_0)^n+\frac{f^{(n+1)}(\xi)}{(n+1)!}(x-x_0)^{n+1}&\\
     \end{align*}
 
-    \subsubsection{泰勒展开式}
+    \paragraph{泰勒展开式}
     \begin{align*}
         e^x& = \sum_{n=0}^{\infty}\frac{x^{n}}{n!}&& = 1 + x + \frac{x^{2}}{2!} + \frac{x^{3}}{3!} + \cdots + \frac{x^{n}}{n!} + o(x^{n}) \enspace (-\infty < x < +\infty)&\\
         \sin x& = \sum_{n=0}^{\infty}(-1)^{n}\frac{x^{2n+1}}{(2n+1)!}&& = x - \frac{x^{3}}{3!} + \frac{x^{5}}{5!} - \cdots + (-1)^{n}\frac{x^{2n+1}}{(2n+1)!} + o(x^{2n+1}) \enspace (-\infty < x < +\infty)&\\
@@ -81,13 +86,106 @@
         \end{cases}&\\
     \end{align*}
 
-    \section{微分方程}
+    \section{一元函数积分学}
 
-    \section{欧拉方程}
-
-    \section{常用极数}
+    \subsection{常用积分公式}
     \begin{align*}
-        \text{P极数}(n>1)\enspace& \frac{1}{n^{p}}
+        \int {a}^{x} dx& = \frac{{a}^{x}}{\ln a}+C& \int \frac{1}{a^{2}+x^{2}}dx& = \frac{1}{a}\arctan\frac{x}{a}+C \enspace (a>0)&\\
+        \int \tan x dx& = -\ln \left|\cos x \right|+C& \int \frac{1}{\sqrt{a^{2}-x^{2}}}dx& = \arcsin\frac{x}{a}+C \enspace (a>0)&\\
+        \int \cot x dx& = \ln \left|\sin x \right|+C& \int \frac{1}{\sqrt{x^{2}+a^{2}}}dx& = \ln\left(x+\sqrt{x^{2}+a^{2}}\right)+C&\\
+        \int \sec x dx& = \ln \left|\sec x + \tan x \right|+C& \int \frac{1}{\sqrt{x^{2}-a^{2}}}dx& = \ln\left|x+\sqrt{x^{2}-a^{2}}\right|+C \enspace (\left|x\right|>\left|a\right|)&\\
+        \int \csc x dx& = \ln \left|\csc x - \cot x \right|+C& \int \frac{1}{x^{2}-a^{2}}dx& = \frac{1}{2a}\ln\left|\frac{x-a}{x+a}\right|+C&\\
+        \int \tan^2 x dx& = \tan x-x+C& \int \cot^2 x dx& = -\cot x-x+C& \\
+    \end{align*}
+    
+    \subsection{点火公式}
+    \begin{align*}
+        \int_{0}^{\frac{\pi}{2}} \sin^{n}x dx = \int_{0}^{\frac{\pi}{2}} \cos^{n}x dx =
+        \begin{cases}
+            \frac{n-1}{n} \times \frac{n-3}{n-2} \times \cdots \times \frac{2}{3} \times 1,& n \text{为大于} 1 \text{的奇数},\\
+            \frac{n-1}{n} \times \frac{n-3}{n-2} \times \cdots \times \frac{1}{2} \times \frac{\pi}{2},& n \text{为正偶数}.
+        \end{cases}
+    \end{align*}
+    积分0到\(\pi\)和0到\(2\pi\)根据被积函数在被积区间的正负性判断是否为0。
+
+    \section{多元函数微分学}
+
+    \section{多元函数积分学}
+
+    \section{常微分方程}
+    
+    \subsection{一阶微分方程}
+
+    \subsubsection{变量可分离型}
+
+    \subsubsection{可化为变量可分离型}
+
+    \subsubsection{一阶线性微分方程}
+    \paragraph{方程结构}\(y'+p(x)y=q(x)\)
+    \paragraph{通解公式}
+    \[y=e^{-\int p(x)dx}\left[\int e^{\int p(x)dx} \cdot q(x)dx+C\right]\]
+
+    \subsubsection{伯努利方程}
+    方程结构为 \(y'+p(x)y=q(x)y^{n}\)，令 \(z=y^{1-n}\) 可推导出的结构为 \(z'+(1-n)p(x)z=(1-n)q(x)\) 即一个一阶线性微分方程，求z然后代换为y。
+    
+    \subsection{二阶可降阶微分方程}
+    
+    \subsubsection{y''=f(x,y')型(方程中不显含未知函数y)}
+    令 \(y'=p(x)\) ， \(y''=p'\) ，求p然后积分 
+    
+    \subsubsection{y''=f(y,y')型(方程中不显含自变量x)}
+    令 \(y'=p\) ， \(y''=\frac{dp}{dy} \cdot p\) ，求p然后积分  
+    
+    \subsection{高阶线性微分方程}
+    
+    \subsubsection{二阶常系数齐次线性微分方程}
+    \(r^2+pr+q=0\) 求 \(\Delta=p^2-4q\)
+    \paragraph{\(\Delta>0\)} \(y=C_1e^{r_1x}+C_2e^{r_2x}\)
+    \paragraph{\(\Delta=0\)} \(y=(C_1+C_2x)e^{rx}\)
+    \paragraph{\(\Delta<0\)} \(y=e^{\alpha x}(C_1\cos\beta x+C_2\sin\beta x)\)
+    
+    \subsubsection{二阶常系数非齐次线性微分方程}
+    \paragraph{方程结构} \(y''+py'+qy=f(x)\)
+    \begin{align*}
+        \text{当} f(x)=P_n(x)e^{\alpha x} \text{，设} y=e^{\alpha x}Q_n(x)x^k \text{，其中}
+        \begin{cases}
+            e^{\alpha x}\text{照抄},\\
+            Q_n(x)\text{为x的n次多项式},\\
+            k=
+            \begin{cases}
+                0, &\alpha\text{不是特征根}\\
+                1, &\alpha\text{是单特征根}\\
+                2, &\alpha\text{是二重特征根}\\
+            \end{cases} 
+        \end{cases} 
+    \end{align*}
+    \begin{align*}
+        \text{当} f(x)=e^{\alpha x}\left[P_m(x)\cos \beta x + P_n(x)\sin \beta x\right] \text{，设} y=e^{\alpha x} \left[Q_l^{(1)}(x)\cos \beta x + Q_l^{(2)}(x)\sin \beta x\right]x^k& \text{，}\\
+        \text{其中}
+        \begin{cases}
+            e^{\alpha x}\text{照抄},\\
+            l=max\{m,n\},Q_l^{(1)}(x),Q_l^{(2)}(x)\text{分别为x的两个不同的l次多项式},\\
+            k=
+            \begin{cases}
+                0, &\alpha\pm\beta i \text{不是特征根},\\
+                1, &\alpha\pm\beta i \text{是特征根}.\\
+            \end{cases} 
+        \end{cases}
+    \end{align*}
+
+    \subsubsection{n阶常系数齐次线性微分方程}
+
+    \subsubsection{欧拉方程}
+    \paragraph{方程结构} \(x^{2}\frac{d^2y}{dx^2}+px\frac{dy}{dx}+qy=f(x)\)
+    \paragraph{固定解法}
+    \subparagraph{当 \(x>0\) 时} 令 \(x=e^t\) 方程化为 \[\frac{d^2y}{dt^2}+(p-1)\frac{dy}{dt}+qy=f(e^t)\] 即二阶常系数非齐次线性微分方程
+    \subparagraph{当 \(x<0\) 时} 令 \(x=-e^t\) 方程化为 \[\frac{d^2y}{dt^2}+(p-1)\frac{dy}{dt}+qy=f(-e^t)\] 即二阶常系数非齐次线性微分方程
+
+    \section{无穷极数}
+
+    \subsection{常用极数}
+    \begin{align*}
+        \text{P极数}\enspace& \sum_{n=1}^{\infty}\frac{1}{n^{p}}
         \begin{cases}
             p>1,&\text{收敛},\\
             p \leq 1,&\text{发散}.
@@ -114,12 +212,17 @@
         \end{cases}&\\
     \end{align*}
 
-    \section{曲率半径}
+    \subsection{两个特殊极数}
+    \begin{align*}
+        \sum_{n=1}^{\infty}\frac{x^{n}}{n}&=-\ln (1-x) \enspace (-1 \leq  x < 1)&  \sum_{n=1}^{\infty} nx^{n-1}&=\frac{1}{(1-x)^{2}} \enspace (-1 < x < 1)&
+    \end{align*}
 
-    \section{形心公式}
+    \section{微积分几何应用}
 
-    \section{旋转曲面}
+    \subsection{形心公式}
 
-    \section{空间曲线}
+    \subsection{旋转曲面}
+
+    \subsection{空间曲线}
 
 \end{document}
