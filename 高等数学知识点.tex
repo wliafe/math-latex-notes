@@ -133,8 +133,80 @@
     积分0到\(\pi\)和0到\(2\pi\)根据被积函数在被积区间的正负性判断是否为0。
 
     \section{多元函数微分学}
+    
+    \subsection{链式求导法则}
 
+    \subsection{隐函数求导法则}
+
+    \paragraph{隐函数求导法则1}当 \(F(x,y)=0\) 时 \(\frac{dy}{dx}=-\frac{F'_x}{F'_y}\)
+
+    \paragraph{隐函数求导法则2}当 \(F(x,y,z)=0\) 时 \(\frac{\partial z}{\partial x}=-\frac{F'_x}{F'_z}\) \(\frac{\partial z}{\partial y}=-\frac{F'_y}{F'_z}\)
+
+    \subsection{二元函数的极值}
+
+    \subsubsection{无条件极值}
+
+    \paragraph{二元函数取极值的充分条件}
+    记 
+        \(\begin{cases}
+            f''_{xx}(x_0,y_0) = A,\\
+            f''_{xy}(x_0,y_0) = B,\\
+            f''_{yy}(x_0,y_0) = C,\\
+        \end{cases}\)
+    则 \(\Delta = AC-B^2\) 
+        \(\begin{cases}
+            >0 \Rightarrow \text{极值}
+            \begin{cases}
+                A<0 \Rightarrow &\text{极大值}\\
+                A>0 \Rightarrow &\text{极小值}\\
+            \end{cases}\\
+            <0 \Rightarrow \text{非极值}\\
+            =0 \Rightarrow \text{方法失效}\\
+        \end{cases}\)
+    
+    方法失效时通常不是极值，可利用极值定义通过举反例证明，常用反例为 \(x=y\)、\(x=-y\)和\(y=0\)。
+
+    \subsubsection{条件极值}
+    求目标函数 \(u=f(x,y,z)\) 在条件 
+        \(\begin{cases}
+            \varphi (x,y,z)=0,\\
+            \psi (x,y,z)=0\\
+        \end{cases}\) 
+    下的极值。
+        
+    构造辅助函数 \(F(x,y,z,\lambda,\mu)=f(x,y,z)+\lambda \varphi (x,y,z)+\mu \psi (x,y,z)\)
+
+    令
+    \(\begin{cases}
+        F'_x=f'_x+\lambda \varphi '_x + \mu \psi '_x=0,\\
+        F'_y=f'_y+\lambda \varphi '_y + \mu \psi '_y=0,\\
+        F'_z=f'_z+\lambda \varphi '_z + \mu \psi '_z=0,\\
+        F'_\lambda=\varphi (x,y,z)=0,\\
+        F'_\mu=\psi (x,y,z)=0;\\
+    \end{cases} \)
+
+    解得 \(x,y,z,\lambda,\mu\) 的值，代入 \(f(x,y,z)\) 即可。
+     
     \section{多元函数积分学}
+
+    \subsection{普通对称性和轮换对称性}
+    普通对称性需要观察函数特征，轮换对称性一定成立，但只有在区域D轮换对称后不变的情况下才有化简的作用。
+
+    \subsection{二重积分}
+
+    \subsubsection{直角坐标系}
+
+    \subsubsection{极坐标系}
+
+    \subsubsection{直角坐标系与极坐标系的转换}
+    \(\begin{cases}
+        x=r \cos \theta\\
+        y=r \sin \theta\\
+    \end{cases} \) 
+
+    \subsection{三重积分}
+
+    \subsubsection{平面坐标系、球坐标系}
 
     \section{常微分方程}
     
@@ -207,7 +279,23 @@
 
     \section{无穷极数}
 
-    \subsection{常用极数}
+    \subsection{极数敛散性判别}
+
+    \subsubsection{正项极数}
+
+    收敛原则、比较判别法、比较判别法极限形式、比值判别法、根值判别法
+
+    \subsubsection{交错级数}
+
+    \paragraph{莱布尼茨判别法}
+
+    \subsubsection{任意项级数}
+
+    \paragraph{绝对收敛}
+
+    \paragraph{条件收敛}
+
+    \subsubsection{常用极数的敛散性}
     \begin{align*}
         \text{P极数}\enspace& \sum_{n=1}^{\infty}\frac{1}{n^{p}}
         \begin{cases}
@@ -234,36 +322,7 @@
             |q|<1,&\text{收敛},\\
             |q| \geq 1,&\text{发散}.
         \end{cases}&\\
-    \end{align*}
-
-    \subsection{两个特殊极数}
-    \begin{align*}
-        \sum_{n=1}^{\infty}\frac{x^{n}}{n}&=-\ln (1-x) \enspace (-1 \leq  x < 1)&  \sum_{n=1}^{\infty} nx^{n-1}&=\frac{1}{(1-x)^{2}} \enspace (-1 < x < 1)&
-    \end{align*}
-
-    \subsection{极数敛散性判别}
-
-    \subsubsection{正项极数}
-
-    \paragraph{收敛原则}
-
-    \paragraph{比较判别法}
-
-    \paragraph{比较判别法极限形式}
-
-    \paragraph{比值判别法}
-
-    \paragraph{根值判别法}
-
-    \subsubsection{交错级数}
-
-    \paragraph{莱布尼茨判别法}
-
-    \subsubsection{任意项级数}
-
-    \paragraph{绝对收敛}
-
-    \paragraph{条件收敛}
+    \end{align*} 
 
     \subsection{幂级数}
 
@@ -274,17 +333,70 @@
     \paragraph{收敛域求法}
 
     \subsubsection{幂级数求和函数}
+    
+    \paragraph{两个特殊的幂极数}
+    \begin{align*}
+        \sum_{n=1}^{\infty}\frac{x^{n}}{n}&=-\ln (1-x) \enspace (-1 \leq  x < 1)&  \sum_{n=1}^{\infty} nx^{n-1}&=\frac{1}{(1-x)^{2}} \enspace (-1 < x < 1)&
+    \end{align*}
 
     \subsubsection{函数展开为幂级数}
 
+    \subsection{傅里叶级数(p233)}
+
     \section{微积分几何应用}
 
-    \subsection{形心公式}
+    \subsection{一元函数微分学}
 
-    \subsection{旋转曲面}
+    \subsubsection{曲率半径}
 
-    \subsection{空间曲线}
+    \paragraph{曲率公式}
+    \[k=\frac{|y''|}{[1+(y')^2]^{3/2}}\]
+    \paragraph{曲率半径公式}
+    \[R=\frac{1}{k}\]
 
+    \subsection{一元函数积分学}
+
+    \subsubsection{平面曲线弧长}
+
+    \paragraph{直角坐标方程} \(s=\int_{a}^{b} \sqrt{1+[y'(x)]^2}dx \). 
+    \paragraph{参数方程} \(s=\int_{\alpha}^{\beta} \sqrt{\left(\frac{dx}{dt}\right)^2+\left(\frac{dy}{dt}\right)^2}dt \).
+    \paragraph{极坐标方程} \(s=\int_{\alpha}^{\beta} \sqrt{[r(\theta)]^2+[r'(\theta)]^2}d\theta \).
+    
+    \subsection{多元函数的微分学}
+
+    \subsubsection{旋转曲面}
+    \paragraph{定义：} 曲线 \(\varGamma\) 绕一条定直线旋转一周所形成的曲面。
+    
+    曲线 \(\varGamma\) : 
+    \(\begin{cases}
+        F(x,y,z)=0,\\
+        G(x,y,z)=0\\
+    \end{cases} \)
+    绕直线 \(L\): \(\frac{x-x_0}{m}=\frac{y-y_0}{n}=\frac{z-z_0}{p}\) 旋转一周所形成的曲面，求法如下：
+
+    构建方程组，方程组包括三部分，分别是：曲线公式、垂直、等距
+
+    \paragraph{垂直：} 在直线上取一点为 \(M_0\) ，在曲线上取一点为 \(M_1\) ，在 \(M_1\) 的纬圆(即 \(M_1\) 绕直线形成的圆)上取一点为 \(P\) ，则 \(M_1P\) 与直线垂直。
+    \paragraph{等距：} \(M_0M_1\) 与 \(M_0P\) 等距。
+
+    解方程组保留x,y,z即可得旋转曲面方程。
+    
+    \subsubsection{空间曲线(p265)}
+    
+    \subsubsection{空间曲面}
+    
+    \subsubsection{方向导数和梯度}
+    
+    \subsubsection{散度与旋度}
+    
+    \subsection{多元函数积分学}
+    
+    \subsubsection{形心公式(p282)}
+    
+    \subsubsection{转动惯量、引力(p283)}
+
+    \subsubsection{格林 高斯 斯托克斯}
+    
     \subsubsection{曲线积分}
 
     \paragraph{积分与路径无关}
