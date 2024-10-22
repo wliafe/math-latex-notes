@@ -38,17 +38,11 @@
     \end{align*}
 
     \subsection{极限不存在}
-    \begin{itemize}
-        \item 极限趋于无穷
-        \item 只存在一个极限
-        \item 左右极限不等
-        \item 震荡不存在
-        \item 函数无定义
-    \end{itemize}
+    极限趋于无穷、只存在一个极限、左右极限不等、震荡不存在、函数无定义    
 
     \subsection{求极限}
 
-    \paragraph{极限转化为积分(2017年16题)} 极限可能是积分的极限形式，转化为积分处理。
+    \paragraph{极限转化为积分(2017年16题)} \(\lim \limits_{x \to \infty} \sum \limits_{k=1}^{n}\frac{k}{n^2}\ln (1+ \frac{k}{n}) \)  极限可能是积分的极限形式，转化为积分处理。
 
     \section{一元函数微分学}
 
@@ -110,7 +104,7 @@
     \paragraph{高阶求导公式}
 
     \paragraph{泰勒公式(2017年9题)}
-    将 \(f(x)\) 化为已知的泰勒展开式，再通过比较系数求出 \(f^{(n)}(x_0)\)。
+    将 \(f(x)=\frac{1}{1+x^2}\) 化为已知的泰勒展开式，再通过比较系数求出 \(f^{(n)}(x_0)\)。
 
     \section{一元函数积分学}
 
@@ -244,6 +238,8 @@
     \subsection{高阶线性微分方程}
     
     \subsubsection{二阶常系数齐次线性微分方程}
+    \paragraph{方程结构} \(y''+py'+qy=0\)
+
     \(r^2+pr+q=0\) 求 \(\Delta=p^2-4q\)
     \paragraph{\(\Delta>0\)} \(y=C_1e^{r_1x}+C_2e^{r_2x}\)
     \paragraph{\(\Delta=0\)} \(y=(C_1+C_2x)e^{rx}\)
@@ -251,32 +247,31 @@
     
     \subsubsection{二阶常系数非齐次线性微分方程}
     \paragraph{方程结构} \(y''+py'+qy=f(x)\)
-    \begin{align*}
-        \text{当} f(x)=P_n(x)e^{\alpha x} \text{，设} y=e^{\alpha x}Q_n(x)x^k \text{，其中}
+
+    当 \(f(x)=P_n(x)e^{\alpha x}\) ，设 \(y=e^{\alpha x}Q_n(x)x^k\) ，其中
+    \(\begin{cases}
+        e^{\alpha x}\text{照抄},\\
+        Q_n(x)\text{为x的n次多项式},\\
+        k=
         \begin{cases}
-            e^{\alpha x}\text{照抄},\\
-            Q_n(x)\text{为x的n次多项式},\\
-            k=
-            \begin{cases}
-                0, &\alpha\text{不是特征根}\\
-                1, &\alpha\text{是单特征根}\\
-                2, &\alpha\text{是二重特征根}\\
-            \end{cases} 
+            0, &\alpha\text{不是特征根}\\
+            1, &\alpha\text{是单特征根}\\
+            2, &\alpha\text{是二重特征根}\\
         \end{cases} 
-    \end{align*}
-    \begin{align*}
-        \text{当} f(x)=e^{\alpha x}\left[P_m(x)\cos \beta x + P_n(x)\sin \beta x\right] \text{，设} y=e^{\alpha x} \left[Q_l^{(1)}(x)\cos \beta x + Q_l^{(2)}(x)\sin \beta x\right]x^k& \text{，}\\
-        \text{其中}
+    \end{cases}\)
+    
+    当 \(f(x)=e^{\alpha x}\left[P_m(x)\cos \beta x + P_n(x)\sin \beta x\right]\) ，设 \(y=e^{\alpha x} \left[Q_l^{(1)}(x)\cos \beta x + Q_l^{(2)}(x)\sin \beta x\right]x^k\) ，
+    
+    其中
+    \(\begin{cases}
+        e^{\alpha x}\text{照抄},\\
+        l=max\{m,n\},Q_l^{(1)}(x),Q_l^{(2)}(x)\text{分别为x的两个不同的l次多项式},\\
+        k=
         \begin{cases}
-            e^{\alpha x}\text{照抄},\\
-            l=max\{m,n\},Q_l^{(1)}(x),Q_l^{(2)}(x)\text{分别为x的两个不同的l次多项式},\\
-            k=
-            \begin{cases}
-                0, &\alpha\pm\beta i \text{不是特征根},\\
-                1, &\alpha\pm\beta i \text{是特征根}.\\
-            \end{cases} 
-        \end{cases}
-    \end{align*}
+            0, &\alpha\pm\beta i \text{不是特征根},\\
+            1, &\alpha\pm\beta i \text{是特征根}.\\
+        \end{cases} 
+    \end{cases}\)
 
     \subsubsection{n阶常系数齐次线性微分方程}
 
@@ -372,7 +367,10 @@
     \paragraph{直角坐标方程} \(s=\int_{a}^{b} \sqrt{1+[y'(x)]^2}dx \). 
     \paragraph{参数方程} \(s=\int_{\alpha}^{\beta} \sqrt{\left(\frac{dx}{dt}\right)^2+\left(\frac{dy}{dt}\right)^2}dt \).
     \paragraph{极坐标方程} \(s=\int_{\alpha}^{\beta} \sqrt{[r(\theta)]^2+[r'(\theta)]^2}d\theta \).
-    
+
+    \subsubsection{旋转曲面的表面积}
+    曲线 \(y=y(x)\) 绕 \(x\) 轴旋转一周所形成的旋转曲面表面积为 \(S=2 \pi \int_{a}^{b} \left| y(x) \right| \sqrt{1+[y'(x)^2]}dx \) 
+
     \subsection{多元函数的微分学}
 
     \subsubsection{旋转曲面}
@@ -394,7 +392,7 @@
     
     \subsubsection{空间曲线(p265)}
     
-    \subsubsection{空间曲面}
+    \subsubsection{空间曲面(p265)}
     
     \subsubsection{方向导数和梯度}
     \paragraph{方向导数} \(\frac{\partial \mathbf{u}}{\partial \mathbf{l}}= \mathbf{u}'_x(P_0)\cos \alpha + \mathbf{u}'_y(P_0)\cos \beta + \mathbf{u}'_z(P_0)\cos \gamma\)
@@ -413,33 +411,44 @@
     \subsection{多元函数积分学}
     
     \subsubsection{第一型曲线积分}
+    \paragraph{投影根本规则} \(dL=\sqrt{(dx)^2+(dy)^2}\)
     
     \subsubsection{第一型曲面积分}
+    \paragraph{投影根本规则} \(dS=\sqrt{(dxdy)^2+(dydz)^2+(dzdx)^2}\) 
     
     \subsubsection{形心公式(p282)}
     
-    \subsubsection{转动惯量}
+    \subsubsection{转动惯量(p283)}
 
     \subsubsection{引力(p283)}
 
     \subsubsection{第二型曲线积分(平面)}
 
-    \paragraph{格林公式}
-
+    \paragraph{格林公式} 设平面有界闭区域 \(D\) 由分段光滑的曲线 \(L\) 围成，函数 \(P(x, y)\) 和 \(Q(x, y)\) 在 \(D\) 上连续可偏导，\(L\) 取正向，则
+    \[ \oint \limits_{L} Pdx+Qdy = \iint \limits_{D} \left( \frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y} \right)d\sigma \]
+    \paragraph{注：} \(L\) 取正向，即当一个人沿着 \(L\) 这个方向前进时，他的左手始终在 \(L\) 所围成的区域 \(D\) 内。
+    
     \paragraph{积分与路径无关}
     \(\Rightarrow \begin{cases}
         Pdx+Qdy,& \text{是} f(x, y) \text{的全微分},\\
-        \oint_{L} Pdx+Qdx = 0,& \text{即} \frac{\partial Q}{\partial x} = \frac{\partial P}{\partial y}.
+        \oint \limits_{L} Pdx+Qdx = 0,& \text{即} \frac{\partial Q}{\partial x} = \frac{\partial P}{\partial y}.
     \end{cases}\)
 
     \subsubsection{第二型曲面积分}
+    \paragraph{基本公式}
+    \begin{align*}
+        \frac{dydz}{\cos \alpha}&=\frac{dzdx}{\cos \beta}=\frac{dxdy}{\cos \gamma}& \iint \limits_{\Sigma} R(x,y,z)dxdy&=\pm \iint \limits_{D_{xy}} R[x,y,z(x,y)]dxdy&
+    \end{align*}
 
-    \paragraph{高斯公式}
+    \paragraph{高斯公式} 设空间有界闭区域 \(\Omega\) 由分片光滑的闭曲面 \(\Sigma \) 围成， \(P(x, y, z)\) ， \(Q(x, y, z)\) ， \(R(x, y, z)\) 在 \(\Omega\) 上具有一阶连续偏导数，\(\Sigma\) 取外侧，则
+    \[\iint \limits_{\Sigma} Pdydz+Qdzdx+Rdxdy=\iiint \limits_{\Omega} \left( \frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y} + \frac{\partial R}{\partial z} \right)dV^{}\]
 
     \subsubsection{第二型曲线积分(空间)}
-
-    \paragraph{斯托克斯公式}
-    
-    \subsubsection{曲线积分}
+    \paragraph{斯托克斯公式} 设 \(\Omega\) 为空间某区域， \(\Sigma \) 为 \(\Omega \) 内的分片光滑有向曲面片，\(\Gamma \) 为逐段光滑的 \(\Omega \) 的边界，它的方向与 \(\Sigma \) 的法向量成右手系，函数 \(P(x, y, z)\) ， \(Q(x, y, z)\) ， \(R(x, y, z)\) 在 \(\Omega\) 上具有一阶连续偏导数，则
+    \[\oint_{\Gamma }Pdx+Qdy+Rdz = \iint \limits_{\Sigma }\left|\begin{array}{cccc}
+        \mathbf{i}& \mathbf{j}& \mathbf{k}\\
+        \frac{\partial}{\partial x}& \frac{\partial}{\partial y}& \frac{\partial}{\partial z}\\
+        P& Q& R
+    \end{array}\right|dS\]
 
 \end{document}
