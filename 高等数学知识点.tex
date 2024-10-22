@@ -67,6 +67,8 @@
     \end{align*}
 
     \subsection{中值定理}
+    \paragraph{涉及函数的中值定理}：有界与最值定理、介值定理、平均值定理、零点定理
+    \paragraph{涉及导数的中值定理}：费马定理、罗尔定理、拉格朗日中值定理、柯西中值定理、泰勒公式。
 
     \subsubsection{罗尔定理}
     \begin{align*}
@@ -206,7 +208,14 @@
 
     \subsection{三重积分}
 
-    \subsubsection{平面坐标系、球坐标系}
+    \subsubsection{球坐标系}
+    令
+    \(\begin{cases}
+        x=r \sin \varphi \cos \theta \\
+        y=r \sin \varphi \sin \theta \\
+        z=r \cos \varphi \\
+    \end{cases} \) 
+    \[\iiint \limits_{\Omega} f(x,y,z)dxdydz=\iiint \limits_{\Omega} f(r \sin \varphi \cos \theta,r \sin \varphi \sin \theta,r \cos \varphi )r^2 \sin \varphi dr d\varphi d\theta\]
 
     \section{常微分方程}
     
@@ -294,6 +303,8 @@
     \paragraph{绝对收敛}
 
     \paragraph{条件收敛}
+
+    \subsubsection{常用抽象数项极数敛散性(p220)}
 
     \subsubsection{常用极数的敛散性}
     \begin{align*}
@@ -386,26 +397,49 @@
     \subsubsection{空间曲面}
     
     \subsubsection{方向导数和梯度}
-    
+    \paragraph{方向导数} \(\frac{\partial \mathbf{u}}{\partial \mathbf{l}}= \mathbf{u}'_x(P_0)\cos \alpha + \mathbf{u}'_y(P_0)\cos \beta + \mathbf{u}'_z(P_0)\cos \gamma\)
+    \paragraph{梯度} \(\mathbf{grad} u \left|_{P_0}\right. = \left(\mathbf{u}'_x(P_0), \mathbf{u}'_y(P_0), \mathbf{u}'_z(P_0)\right)\)
+    \paragraph{注：} 梯度是一个向量，他的方向与是最大方向导数的方向，他的模是方向导数的最大值。
+        
     \subsubsection{散度与旋度}
+    \paragraph{散度} \(div \mathbf{A} = \frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y} + \frac{\partial R}{\partial z}\)
+    \paragraph{旋度} \(\mathbf{rot} \mathbf{A} = 
+    \left|\begin{array}{cccc}
+        \mathbf{i}& \mathbf{j}& \mathbf{k}\\
+        \frac{\partial}{\partial x}& \frac{\partial}{\partial y}& \frac{\partial}{\partial z}\\
+        P& Q& R
+    \end{array}\right|\)
     
     \subsection{多元函数积分学}
     
+    \subsubsection{第一型曲线积分}
+    
+    \subsubsection{第一型曲面积分}
+    
     \subsubsection{形心公式(p282)}
     
-    \subsubsection{转动惯量、引力(p283)}
+    \subsubsection{转动惯量}
 
-    \subsubsection{格林 高斯 斯托克斯}
-    
-    \subsubsection{曲线积分}
+    \subsubsection{引力(p283)}
+
+    \subsubsection{第二型曲线积分(平面)}
+
+    \paragraph{格林公式}
 
     \paragraph{积分与路径无关}
-    \begin{align*}
-        \text{积分与路径无关} \Rightarrow 
-        \begin{cases}
-            Pdx+Qdy,& \text{是} f(x, y) \text{的全微分},\\
-            \oint_{L} Pdx+Qdx = 0,& \text{即} \frac{\partial Q}{\partial x} = \frac{\partial P}{\partial y}.
-        \end{cases}
-    \end{align*}
+    \(\Rightarrow \begin{cases}
+        Pdx+Qdy,& \text{是} f(x, y) \text{的全微分},\\
+        \oint_{L} Pdx+Qdx = 0,& \text{即} \frac{\partial Q}{\partial x} = \frac{\partial P}{\partial y}.
+    \end{cases}\)
+
+    \subsubsection{第二型曲面积分}
+
+    \paragraph{高斯公式}
+
+    \subsubsection{第二型曲线积分(空间)}
+
+    \paragraph{斯托克斯公式}
+    
+    \subsubsection{曲线积分}
 
 \end{document}
