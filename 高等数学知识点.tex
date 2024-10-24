@@ -188,36 +188,30 @@
     \subsection{普通对称性和轮换对称性}
     普通对称性需要观察函数特征，轮换对称性一定成立，但只有在区域D轮换对称后不变的情况下才有化简的作用。
 
-    \subsection{二重积分}
+    \subsection{坐标系转换}
+    直角坐标系、极坐标系、球坐标系
 
-    \subsubsection{直角坐标系}
-
-    \subsubsection{极坐标系}
-
-    \subsubsection{直角坐标系与极坐标系的转换}
-    \(\begin{cases}
-        x=r \cos \theta\\
-        y=r \sin \theta\\
-    \end{cases} \) 
-
-    \subsection{三重积分}
-
-    \subsubsection{球坐标系}
-    令
-    \(\begin{cases}
-        x=r \sin \varphi \cos \theta \\
-        y=r \sin \varphi \sin \theta \\
-        z=r \cos \varphi \\
-    \end{cases} \) 
-    \[\iiint \limits_{\Omega} f(x,y,z)dxdydz=\iiint \limits_{\Omega} f(r \sin \varphi \cos \theta,r \sin \varphi \sin \theta,r \cos \varphi )r^2 \sin \varphi dr d\varphi d\theta\]
+    \begin{align*}
+        \text{令}&
+        \begin{cases}
+            x=r \cos \theta\\
+            y=r \sin \theta\\
+        \end{cases}&
+        \iint \limits_{\Sigma } f(x,y)dxdy& = \iint \limits_{\Sigma } f(r \cos \theta,r \sin \theta) rdrd\theta&\\
+        \text{令}&
+        \begin{cases}
+            x=r \sin \varphi \cos \theta \\
+            y=r \sin \varphi \sin \theta \\
+            z=r \cos \varphi \\
+        \end{cases}&
+        \iiint \limits_{\Omega} f(x,y,z)dxdydz& = \iiint \limits_{\Omega} f(r \sin \varphi \cos \theta,r \sin \varphi \sin \theta,r \cos \varphi )r^2 \sin \varphi dr d\varphi d\theta&
+    \end{align*}
 
     \section{常微分方程}
     
     \subsection{一阶微分方程}
 
-    \subsubsection{变量可分离型}
-
-    \subsubsection{可化为变量可分离型}
+    \subsubsection{变量可分离型和可化为变量可分离型}
 
     \subsubsection{一阶线性微分方程}
     \paragraph{方程结构}\(y'+p(x)y=q(x)\)
@@ -281,29 +275,50 @@
     \subparagraph{当 \(x>0\) 时} 令 \(x=e^t\) 方程化为 \[\frac{d^2y}{dt^2}+(p-1)\frac{dy}{dt}+qy=f(e^t)\] 即二阶常系数非齐次线性微分方程
     \subparagraph{当 \(x<0\) 时} 令 \(x=-e^t\) 方程化为 \[\frac{d^2y}{dt^2}+(p-1)\frac{dy}{dt}+qy=f(-e^t)\] 即二阶常系数非齐次线性微分方程
 
-    \section{无穷极数}
+    \section{无穷级数}
 
-    \subsection{极数敛散性判别}
+    \subsection{级数敛散性判别}
 
-    \subsubsection{正项极数}
-
+    \subsubsection{正项级数}
     收敛原则、比较判别法、比较判别法极限形式、比值判别法、根值判别法
 
     \subsubsection{交错级数}
 
-    \paragraph{莱布尼茨判别法}
+    \paragraph{莱布尼茨判别法} 交错级数 \(\{u_n\}\) 单调不增且 \(\lim \limits_{x \to \infty} u_n=0\) ，则该级数收敛。
 
     \subsubsection{任意项级数}
 
-    \paragraph{绝对收敛}
+    \begin{Definition}
+        设 \(\sum \limits_{n=1}^{\infty} u_n\) 为任意项级数，若 \(\sum \limits_{n=1}^{\infty} |u_n|\) 收敛，则称 \(\sum \limits_{n=1}^{\infty} u_n\) 绝对收敛。
+    \end{Definition}
+    \begin{Definition}
+        设 \(\sum \limits_{n=1}^{\infty} u_n\) 为任意项级数，若 \(\sum \limits_{n=1}^{\infty} u_n\) 收敛， \(\sum \limits_{n=1}^{\infty} |u_n|\) 发散，则称 \(\sum \limits_{n=1}^{\infty} u_n\) 条件收敛。
+    \end{Definition}
+    \begin{Theorem}
+        若任意项级数 \(\sum \limits_{n=1}^{\infty} u_n\) 绝对收敛，则 \(\sum \limits_{n=1}^{\infty} u_n\) 必收敛。
+    \end{Theorem}    
 
-    \paragraph{条件收敛}
+    \subsubsection{常用抽象数项级数敛散性}
+    \begin{itemize}
+        \item 设 \(\sum \limits_{n=1}^{\infty } \left| u_n \right| \) 收敛，则 \(\sum \limits_{n=1}^{\infty } u_n\) 收敛；设 \(\sum \limits_{n=1}^{\infty } u_n\) 发散，则 \(\sum \limits_{n=1}^{\infty } \left| u_n \right| \) 发散。
+        \item 设 \(\sum \limits_{n=1}^{\infty } u_n^2\) 收敛，则 \(\sum \limits_{n=1}^{\infty } \frac{u_n}{n}\) 绝对收敛。
+        \item 设 \(\sum \limits_{n=1}^{\infty } u_n\) 收敛，则 \(\sum \limits_{n=1}^{\infty } \left| u_n \right| \) 不定。
+        \item 设 \(\sum \limits_{n=1}^{\infty } u_n\) 收敛，则 \(\sum \limits_{n=1}^{\infty } u_n^2 \) 不定。
+        \item 设 \(\sum \limits_{n=1}^{\infty } u_n\) 收敛，则 \(\sum \limits_{n=1}^{\infty } (-1)^{n} u_n \) 不定。
+        \item 设 \(\sum \limits_{n=1}^{\infty } u_n\) 收敛，则 \(\sum \limits_{n=1}^{\infty } (-1)^{n} \frac{u_n}{n} \) 不定。
+        \item 设 \(\sum \limits_{n=1}^{\infty } u_n\) 收敛，则 \(\sum \limits_{n=1}^{\infty } u_{2n} \) ， \(\sum \limits_{n=1}^{\infty } u_{2n-1} \) 不定。
+        \item 设 \(\sum \limits_{n=1}^{\infty } u_n\) 收敛，则 \(\sum \limits_{n=1}^{\infty } (u_{2n-1} + u_{2n}) \) 收敛。
+        \item 设 \(\sum \limits_{n=1}^{\infty } u_n\) 收敛，则 \(\sum \limits_{n=1}^{\infty } (u_{2n-1} - u_{2n}) \) 不定。
+        \item 设 \(\sum \limits_{n=1}^{\infty } u_n\) 收敛，则 \(\begin{cases}
+            \sum \limits_{n=1}^{\infty } (u_{n} + u_{n+1}) \text{收敛}, \sum \limits_{n=1}^{\infty } u_{n} + \sum \limits_{n=1}^{\infty } u_{n+1} \text{收敛},\\
+            \sum \limits_{n=1}^{\infty } (u_{n} - u_{n+1}) \text{收敛}, \sum \limits_{n=1}^{\infty } u_{n} - \sum \limits_{n=1}^{\infty } u_{n+1} \text{收敛}.\\
+        \end{cases} \) 
+        \item 设 \(\sum \limits_{n=1}^{\infty } u_n\) 收敛，则 \(\sum \limits_{n=1}^{\infty } u_{n}u_{n+1} \) 不定。
+    \end{itemize}
 
-    \subsubsection{常用抽象数项极数敛散性(p220)}
-
-    \subsubsection{常用极数的敛散性}
+    \subsubsection{常用级数的敛散性}
     \begin{align*}
-        \text{P极数}\enspace& \sum_{n=1}^{\infty}\frac{1}{n^{p}}
+        \text{P级数}\enspace& \sum_{n=1}^{\infty}\frac{1}{n^{p}}
         \begin{cases}
             p>1,&\text{收敛},\\
             p \leq 1,&\text{发散}.
@@ -313,7 +328,7 @@
             p>1,&\text{收敛},\\
             p \leq 1,&\text{发散}.
         \end{cases}&\\
-        \text{广义P极数}\enspace& \sum_{n=2}^{\infty}\frac{1}{n \ln^p n}
+        \text{广义P级数}\enspace& \sum_{n=2}^{\infty}\frac{1}{n \ln^p n}
         \begin{cases}
             p>1,&\text{收敛},\\
             p \leq 1,&\text{发散}.
@@ -323,7 +338,7 @@
             p>1,&\text{收敛},\\
             p \leq 1,&\text{发散}.
         \end{cases}&\\
-        \text{等比极数}\enspace& \sum_{n=1}^{\infty}aq^{n-1}
+        \text{等比级数}\enspace& \sum_{n=1}^{\infty}aq^{n-1}
         \begin{cases}
             |q|<1,&\text{收敛},\\
             |q| \geq 1,&\text{发散}.
@@ -334,18 +349,26 @@
 
     \subsubsection{幂级数收敛域}
 
-    \paragraph{阿贝尔定理}
+    \paragraph{阿贝尔定理} 当幂级数 \(\sum \limits_{n=1}^{\infty}a_nx^n\) 在点 \(x=x_1(x_1\neq 0)\) 处收敛时，对于满足 \(|x|<|x_1|\) 的一切 \(x\) ，幂级数绝对收敛；当幂级数 \(\sum \limits_{n=1}^{\infty}a_nx^n\) 在点 \(x=x_2(x_2\neq 0)\) 处发散时，对于满足 \(|x|>|x_2|\) 的一切 \(x\) ，幂级数发散。
 
-    \paragraph{收敛域求法}
+    \paragraph{收敛域求法} 若 \(\lim \limits_{n \to \infty} \left| \frac{a_{n+1}}{a_{n}} \right| = \rho \) ，则 \(\sum \limits_{n=0}^{\infty}a_{n}x^{n}\) 的收敛半径 \(R\) 的表达式为
+    \[R=\begin{cases}
+        \frac{1}{\rho}, &\rho \neq 0,\\
+        +\infty ,&\rho = 0,\\
+        0 ,&\rho = +\infty.
+    \end{cases} \]
+    
+    然后单独判断幂级数在 \(x=\pm R\) 处的敛散性，即可得到收敛域。
 
     \subsubsection{幂级数求和函数}
     
-    \paragraph{两个特殊的幂极数}
+    \paragraph{两个特殊的幂级数}
     \begin{align*}
         \sum_{n=1}^{\infty}\frac{x^{n}}{n}&=-\ln (1-x) \enspace (-1 \leq  x < 1)&  \sum_{n=1}^{\infty} nx^{n-1}&=\frac{1}{(1-x)^{2}} \enspace (-1 < x < 1)&
     \end{align*}
 
     \subsubsection{函数展开为幂级数}
+    这里指泰勒级数和麦克劳林级数，具体求法包括直接求泰勒公式法和利用已知幂级数展开式，通过变量代换、四则运算、逐项求导、逐项积分和待定系数法等方法得到函数的展开式。
 
     \subsection{傅里叶级数(p233)}
 
@@ -354,16 +377,12 @@
     \subsection{一元函数微分学}
 
     \subsubsection{曲率半径}
-
-    \paragraph{曲率公式}
-    \[k=\frac{|y''|}{[1+(y')^2]^{3/2}}\]
-    \paragraph{曲率半径公式}
-    \[R=\frac{1}{k}\]
+    \paragraph{曲率公式} \[k=\frac{|y''|}{[1+(y')^2]^{3/2}}\]
+    \paragraph{曲率半径公式} \[R=\frac{1}{k}\]
 
     \subsection{一元函数积分学}
 
     \subsubsection{平面曲线弧长}
-
     \paragraph{直角坐标方程} \(s=\int_{a}^{b} \sqrt{1+[y'(x)]^2}dx \). 
     \paragraph{参数方程} \(s=\int_{\alpha}^{\beta} \sqrt{\left(\frac{dx}{dt}\right)^2+\left(\frac{dy}{dt}\right)^2}dt \).
     \paragraph{极坐标方程} \(s=\int_{\alpha}^{\beta} \sqrt{[r(\theta)]^2+[r'(\theta)]^2}d\theta \).
@@ -390,9 +409,7 @@
 
     解方程组保留x,y,z即可得旋转曲面方程。
     
-    \subsubsection{空间曲线(p265)}
-    
-    \subsubsection{空间曲面(p265)}
+    \subsubsection{空间曲线和空间曲面的切线与法平面(p265)}
     
     \subsubsection{方向导数和梯度}
     \paragraph{方向导数} \(\frac{\partial \mathbf{u}}{\partial \mathbf{l}}= \mathbf{u}'_x(P_0)\cos \alpha + \mathbf{u}'_y(P_0)\cos \beta + \mathbf{u}'_z(P_0)\cos \gamma\)
@@ -400,13 +417,15 @@
     \paragraph{注：} 梯度是一个向量，他的方向与是最大方向导数的方向，他的模是方向导数的最大值。
         
     \subsubsection{散度与旋度}
-    \paragraph{散度} \(div \mathbf{A} = \frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y} + \frac{\partial R}{\partial z}\)
-    \paragraph{旋度} \(\mathbf{rot} \mathbf{A} = 
-    \left|\begin{array}{cccc}
-        \mathbf{i}& \mathbf{j}& \mathbf{k}\\
-        \frac{\partial}{\partial x}& \frac{\partial}{\partial y}& \frac{\partial}{\partial z}\\
-        P& Q& R
-    \end{array}\right|\)
+    \begin{align*}
+        \text{散度} div \mathbf{A}& = \frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y} + \frac{\partial R}{\partial z}&
+        \text{旋度} \mathbf{rot} \mathbf{A}& = 
+        \left|\begin{array}{cccc}
+            \mathbf{i}& \mathbf{j}& \mathbf{k}\\
+            \frac{\partial}{\partial x}& \frac{\partial}{\partial y}& \frac{\partial}{\partial z}\\
+            P& Q& R
+        \end{array}\right|&
+    \end{align*}
     
     \subsection{多元函数积分学}
     
@@ -416,11 +435,7 @@
     \subsubsection{第一型曲面积分}
     \paragraph{投影根本规则} \(dS=\sqrt{(dxdy)^2+(dydz)^2+(dzdx)^2}\) 
     
-    \subsubsection{形心公式(p282)}
-    
-    \subsubsection{转动惯量(p283)}
-
-    \subsubsection{引力(p283)}
+    \subsubsection{形心公式(p282)、转动惯量(p283)、引力(p283)}
 
     \subsubsection{第二型曲线积分(平面)}
 
