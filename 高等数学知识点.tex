@@ -113,6 +113,11 @@
         \int \csc x dx& = \ln \left|\csc x - \cot x \right|+C& \int \frac{1}{x^{2}-a^{2}}dx& = \frac{1}{2a}\ln\left|\frac{x-a}{x+a}\right|+C&\\
         \int \tan^2 x dx& = \tan x-x+C& \int \cot^2 x dx& = -\cot x-x+C& \\
     \end{align*}
+
+    \subsection{区间再现公式}
+    \begin{align*}
+        \int_{a}^{b}f(x)dx& = \int_{a}^{b}f(a+b-x)dx&\\
+    \end{align*}
     
     \subsection{点火公式}
     \begin{align*}
@@ -457,7 +462,7 @@
     \subsubsection{第二型曲线积分(空间)}
     \paragraph{斯托克斯公式} 设 \(\Omega\) 为空间某区域， \(\Sigma \) 为 \(\Omega \) 内的分片光滑有向曲面片，\(\Gamma \) 为逐段光滑的 \(\Omega \) 的边界，它的方向与 \(\Sigma \) 的法向量成右手系，函数 \(P(x, y, z)\) ， \(Q(x, y, z)\) ， \(R(x, y, z)\) 在 \(\Omega\) 上具有一阶连续偏导数，则
     \[\oint_{\Gamma }Pdx+Qdy+Rdz = \iint \limits_{\Sigma }\left|\begin{array}{cccc}
-        \mathbf{i}& \mathbf{j}& \mathbf{k}\\
+        \cos \alpha & \cos \beta & \cos \gamma \\
         \frac{\partial}{\partial x}& \frac{\partial}{\partial y}& \frac{\partial}{\partial z}\\
         P& Q& R
     \end{array}\right|dS\]
